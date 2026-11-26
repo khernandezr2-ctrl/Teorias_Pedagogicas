@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Teorías pedagógicas contemporáneas: organizador comparativo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+:root{color-scheme:dark;--glass:rgba(255,255,255,.14);--glass-strong:rgba(255,255,255,.24);--edge:rgba(255,255,255,.38);--ink:#fff;--soft:rgba(255,255,255,.82);--glow:#ffb35c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:"Public Sans",system-ui,sans-serif;line-height:1.55;
+background:radial-gradient(55% 45% at 85% 8%,rgba(255,154,60,.75),transparent 70%),radial-gradient(50% 55% at 8% 92%,rgba(140,92,255,.8),transparent 70%),radial-gradient(45% 45% at 55% 55%,rgba(31,182,255,.5),transparent 70%),linear-gradient(135deg,#0a1f5c,#1b3fae 55%,#0b2a6f);background-attachment:fixed}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
+.glass{background:var(--glass);border:1px solid var(--edge);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:0 10px 40px rgba(5,10,50,.35),inset 0 1px 0 rgba(255,255,255,.35)}
+.layout{display:grid;grid-template-columns:200px 1fr;gap:26px;max-width:1240px;margin:0 auto;padding:24px 20px 40px}
+
+/* Menú lateral */
+.dock{align-self:start;position:sticky;top:20px;border-radius:30px;padding:18px 10px;display:flex;flex-direction:column;gap:6px}
+.item{background:none;border:0;display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 8px;border-radius:20px;text-align:center;transition:transform .25s ease,background .25s;transform-origin:center}
+.item svg{width:34px;height:34px;fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4));transition:transform .25s}
+.item span{font-weight:600;font-size:.92rem;line-height:1.2;text-shadow:0 1px 8px rgba(0,0,0,.55);transition:font-size .25s}
+.item:hover,.item:focus-visible{transform:scale(1.14);background:rgba(255,255,255,.12)}
+.item:hover svg,.item:focus-visible svg{transform:scale(1.35) translateY(-2px)}
+.item:hover span,.item:focus-visible span{font-size:1.02rem}
+.item[aria-pressed="true"]{background:var(--glass-strong);box-shadow:inset 0 0 0 1px var(--edge),0 0 22px rgba(255,179,92,.35)}
+.item.cmp{margin-top:8px;border-top:1px dashed var(--edge);border-radius:0 0 20px 20px;padding-top:18px}
+
+/* Contenido */
+.title{border-radius:28px;padding:22px 28px;margin-bottom:18px;background:rgba(6,18,70,.38)}
+h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(1.8rem,4.6vw,3rem);line-height:1.08;margin:0;text-shadow:0 2px 16px rgba(0,0,0,.55)}
+.title p{margin:6px 0 0;color:var(--soft);text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.head{border-radius:22px;padding:16px 22px;margin-bottom:18px}
+.head h2{font-family:Fraunces,Georgia,serif;font-size:1.6rem;margin:0}
+.head .au{margin:0 0 6px;color:var(--soft);font-size:.92rem}
+.head .idea{margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.flip{perspective:1000px;padding:0;border:0;background:none;height:360px;text-align:left;transition:transform .3s ease;border-radius:28px}
+.flip:hover,.flip:focus-visible{transform:scale(1.045)}
+.face{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.flip[aria-pressed="true"] .face{transform:rotateY(180deg)}
+.side{position:absolute;inset:0;border-radius:28px;backface-visibility:hidden;-webkit-backface-visibility:hidden;padding:26px;display:flex;flex-direction:column;justify-content:center;
+border:1px solid var(--edge);box-shadow:0 14px 44px rgba(5,10,50,.4),inset 0 1px 0 rgba(255,255,255,.4)}
+.front{align-items:center;text-align:center;background:linear-gradient(160deg,rgba(255,255,255,.26),rgba(255,255,255,.08))}
+.front b{font-family:Fraunces,Georgia,serif;font-size:1.65rem;line-height:1.15;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.front small{margin-top:12px;color:var(--soft)}
+.back{transform:rotateY(180deg);background:rgba(8,20,80,.62);justify-content:flex-start;overflow:auto}
+.back h3{font-family:Fraunces,Georgia,serif;margin:0 0 10px;font-size:1.2rem}
+.back ul{margin:0;padding-left:20px}.back li{margin-bottom:8px}
+.blur{position:absolute;inset:0;border-radius:28px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);pointer-events:none}
+.hint{color:var(--soft);font-size:.92rem;margin:14px 4px 0}
+.tablewrap{border-radius:24px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:900px;font-size:.95rem}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--edge)}
+thead th{font-family:Fraunces,Georgia,serif;font-size:1.05rem;background:rgba(255,255,255,.12)}
+tbody th{width:150px;background:rgba(255,255,255,.08)}
+ul.t{margin:0;padding-left:18px}
+tr:last-child th,tr:last-child td{border-bottom:0}
+.hidden{display:none}
+
+@media (max-width:900px){
+ .layout{grid-template-columns:1fr;padding-bottom:130px}
+ .dock{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));top:auto;flex-direction:row;overflow-x:auto;border-radius:24px;padding:8px;z-index:5}
+ .item{min-width:92px;flex:1}.item svg{width:26px;height:26px}.item span{font-size:.75rem}
+ .item.cmp{margin:0;border:0;padding-top:12px}
+ .grid{grid-template-columns:1fr}.flip{height:300px}
+}
+@media (prefers-reduced-motion:reduce){.face,.item,.item svg,.flip{transition:none}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="dock glass" id="dock" aria-label="Teorías pedagógicas"></nav>
+  <main>
+    <header class="title glass">
+      <h1>Teorías pedagógicas contemporáneas</h1>
+      <p>Elige una teoría en el menú y voltea cada tarjeta para ver su contenido.</p>
+    </header>
+    <section id="detalle">
+      <div class="head glass">
+        <h2 id="nombre"></h2>
+        <p class="au" id="autores"></p>
+        <p class="idea" id="idea"></p>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="hint">Toca una tarjeta para voltearla.</p>
+    </section>
+    <section id="comparativo" class="hidden" aria-label="Tabla comparativa">
+      <div class="tablewrap glass"><table id="tabla"></table></div>
+    </section>
+  </main>
+</div>
+
+<script>
+const ICONOS={
+ con:'<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/>',
+ cnx:'<circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="12" cy="19" r="2.2"/><circle cx="12" cy="11" r="2.2"/><path d="M6.8 7.2l3.5 2.6M17.2 7.2l-3.5 2.6M12 13.2v3.6"/>',
+ sit:'<path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0113 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/>',
+ tra:'<path d="M4 12a8 8 0 0113.7-5.6L20 8"/><path d="M20 3v5h-5"/><path d="M20 12a8 8 0 01-13.7 5.6L4 16"/><path d="M4 21v-5h5"/>',
+ cmp:'<rect x="3" y="4" width="5" height="16" rx="1.5"/><rect x="9.5" y="4" width="5" height="16" rx="1.5"/><rect x="16" y="4" width="5" height="16" rx="1.5"/>'
+};
+const ASPECTOS=[
+ {k:"principios",t:"Principios fundamentales"},
+ {k:"roles",t:"Rol del docente y del estudiante"},
+ {k:"digital",t:"Aplicación en entornos digitales"}
+];
+const TEORIAS=[
+ {id:"con",nombre:"Constructivismo",autores:"Referentes: Piaget, Vygotsky, Ausubel",
+  idea:"El conocimiento no se recibe: cada persona lo construye a partir de lo que ya sabe y de la interacción con otros.",
+  principios:["El aprendizaje es una construcción activa del estudiante.","Se apoya en los conocimientos previos (aprendizaje significativo).","La interacción social impulsa el desarrollo: zona de desarrollo próximo."],
+  roles:["Docente: mediador que diseña retos y ofrece andamiaje.","Estudiante: protagonista que explora, pregunta y construye sentido."],
+  digital:["Simulaciones y laboratorios virtuales.","Documentos y wikis colaborativos.","Foros de discusión y aprendizaje basado en problemas en plataformas como Moodle."]},
+ {id:"cnx",nombre:"Conectivismo",autores:"Referentes: George Siemens, Stephen Downes",
+  idea:"Aprender es crear y recorrer conexiones entre personas, información y herramientas, en una red que se actualiza todo el tiempo.",
+  principios:["El conocimiento está distribuido en una red de nodos.","Saber dónde y cómo encontrar información pesa más que memorizarla.","Mantener las conexiones vivas permite aprender de forma continua."],
+  roles:["Docente: curador y facilitador de redes; modela cómo filtrar información.","Estudiante: nodo activo que busca, conecta, crea y comparte."],
+  digital:["Cursos abiertos (MOOC) y comunidades en línea.","Blogs, redes sociales y entornos personales de aprendizaje.","Curaduría de recursos con marcadores y tableros compartidos."]},
+ {id:"sit",nombre:"Aprendizaje situado",autores:"Referentes: Lave y Wenger, Brown, Collins y Duguid",
+  idea:"Se aprende participando en actividades reales, dentro de una comunidad de práctica y en un contexto con sentido.",
+  principios:["El conocimiento está ligado al contexto donde se usa.","Se aprende participando en comunidades de práctica.","Las tareas auténticas acercan el aula a la vida real."],
+  roles:["Docente: experto que guía y propone situaciones auténticas.","Estudiante: aprendiz que pasa de participar en lo básico a asumir tareas completas."],
+  digital:["Estudios de caso reales y proyectos con comunidades.","Simuladores y mundos virtuales de práctica profesional.","Portafolios digitales que documentan el proceso."]},
+ {id:"tra",nombre:"Aprendizaje transformativo",autores:"Referente: Jack Mezirow",
+  idea:"Aprender de verdad es cambiar la forma en que interpretamos el mundo: se revisan los supuestos propios y se actúa desde una perspectiva nueva.",
+  principios:["El aprendizaje transforma los marcos de referencia con que damos sentido a la experiencia.","Parte de un dilema desorientador que invita a la reflexión crítica.","Se consolida con el diálogo racional con otros y la acción desde la nueva perspectiva."],
+  roles:["Docente: facilitador que crea un ambiente seguro y provoca la reflexión crítica.","Estudiante: cuestiona sus propios supuestos, dialoga con otras miradas y actúa sobre lo aprendido."],
+  digital:["Diarios reflexivos y blogs personales.","Debates en foros con perspectivas diversas.","Narrativas digitales y proyectos de ciudadanía digital."]}
+];
+let activa=0,modo="una";
+const $=id=>document.getElementById(id);
+const lista=(a,c)=>"<ul"+(c?" class='"+c+"'":"")+">"+a.map(x=>"<li>"+x+"</li>").join("")+"</ul>";
+function pintarDock(){
+ const d=$("dock");d.innerHTML="";
+ const items=TEORIAS.map((t,i)=>({id:t.id,txt:t.nombre,on:modo==="una"&&i===activa,fn:()=>{activa=i;modo="una";render()}}));
+ items.push({id:"cmp",txt:"Comparar los cuatro",on:modo==="todas",cls:"cmp",fn:()=>{modo="todas";render()}});
+ items.forEach(o=>{
+  const b=document.createElement("button");b.className="item"+(o.cls?" "+o.cls:"");
+  b.setAttribute("aria-pressed",o.on);
+  b.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+ICONOS[o.id]+'</svg><span>'+o.txt+'</span>';
+  b.onclick=o.fn;d.appendChild(b);
+ });
+}
+function render(){
+ pintarDock();
+ if(modo==="todas"){
+  $("detalle").classList.add("hidden");$("comparativo").classList.remove("hidden");
+  let h="<thead><tr><th></th>"+TEORIAS.map(t=>"<th>"+t.nombre+"</th>").join("")+"</tr></thead><tbody>";
+  ASPECTOS.forEach(a=>{h+="<tr><th scope='row'>"+a.t+"</th>"+TEORIAS.map(t=>"<td>"+lista(t[a.k],"t")+"</td>").join("")+"</tr>"});
+  $("tabla").innerHTML=h+"</tbody>";return;
+ }
+ $("comparativo").classList.add("hidden");$("detalle").classList.remove("hidden");
+ const t=TEORIAS[activa];
+ $("nombre").textContent=t.nombre;$("autores").textContent=t.autores;$("idea").textContent=t.idea;
+ const g=$("grid");g.innerHTML="";
+ ASPECTOS.forEach(a=>{
+  const b=document.createElement("button");b.className="flip";b.setAttribute("aria-pressed","false");b.setAttribute("aria-label",a.t);
+  b.innerHTML="<div class='blur'></div><div class='face'><div class='side front'><b>"+a.t+"</b><small>Toca para ver</small></div><div class='side back'><h3>"+a.t+"</h3>"+lista(t[a.k])+"</div></div>";
+  b.onclick=()=>b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")!=="true");
+  g.appendChild(b);
+ });
+}
+render();
+</script>
+</body>
+</html>
